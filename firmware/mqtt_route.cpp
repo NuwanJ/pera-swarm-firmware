@@ -1,4 +1,5 @@
-
+#include <Arduino.h>
+#include "mqtt_route.h"
 // This will define all the MQTT route actions
 
 void mqtt_onMessageArrived(char* topic, byte* message, unsigned int length) {

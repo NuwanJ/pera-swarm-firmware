@@ -1,3 +1,6 @@
+#include <Arduino.h>
+#include "neopixel.h"
+#include "mqtt_logic.h"
 
 #ifdef ENABLE_NEOPIXEL_RING
 

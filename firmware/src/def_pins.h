@@ -1,4 +1,5 @@
-
+#ifndef _ROBOT_PINS_H
+#define _ROBOT_PINS_H
 
 // Directions, do not remove
 #define LEFT 4
@@ -58,3 +59,6 @@
 #define PIN_SDA 21
 
 #define PIN_BATTERY_SENSE 35
+
+
+#endif

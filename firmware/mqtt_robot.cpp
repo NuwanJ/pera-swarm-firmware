@@ -1,4 +1,6 @@
-
+#include <Arduino.h>
+#include "mqtt_robot.h"
+#include "mqtt_logic.h"   
 
 void mqtt_comm_out(char* msg){
     sprintf(tempString1, "%s/%s", CHANNEL,TOPIC_COMM_OUT_SIMPLE);

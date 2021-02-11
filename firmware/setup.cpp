@@ -1,9 +1,6 @@
+#include <Arduino.h>
 
-#include "features.h"   // Enable or Diasable services
-#include "define.h"     // Configurations for version 4 PCB
-#include "config.h"   // Prepare this file before use
-
-//#include "config_sample.h"   // Sample configurations
+#include "setup.h"
 
 void setup() {
 

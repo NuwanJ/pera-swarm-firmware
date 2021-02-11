@@ -1,3 +1,12 @@
+#include <Arduino.h>
+#include "features.h"   // Enable or Diasable services
+#include "define.h"     // Configurations for version 4 PCB
+#include "config.h"   // Prepare this file before use
+
+#include "pattern.h"
+#include "mqtt_logic.h"
+#include "wifi.h"
+#include "neopixel.h" 
 
 int modeController(){
     buttonStatus = gpio.readModeButton();

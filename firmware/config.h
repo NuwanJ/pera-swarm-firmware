@@ -1,9 +1,10 @@
 
 // This is the configuration file for the robot
 // Rename this file as 'config.h' before use
+#pragma once
 
-#ifndef _ROBOT_CONFIG_H
-#define _ROBOT_CONFIG_H
+#ifndef _ROBOT_CONFIG_X_H
+#define _ROBOT_CONFIG_X_H
 
 
 // ---------------------------------------------------------- MQTT Communication
@@ -27,11 +28,10 @@
 
 // ------------------------------------------------------------ WiFi Credentials
 
-#endif
 
 
 #define WIFI_SSID "Techyon Lab"
 #define WIFI_PASS "iot@ceykod"
 
-const char* ssid = WIFI_SSID;
-const char* password = WIFI_PASS;
+
+#endif

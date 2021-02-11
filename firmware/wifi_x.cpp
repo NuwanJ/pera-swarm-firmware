@@ -1,3 +1,5 @@
+#include <Arduino.h>
+#include "wifi_x.h"
 
 #ifdef ENABLE_WIFI
 

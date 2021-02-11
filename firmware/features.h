@@ -1,4 +1,4 @@
-
+#pragma once
 
 #define ENABLE_SERIAL_COMMUNICATION 1     // Enable or disable serial monitor for libraries
 #define ENABLE_MEMORY

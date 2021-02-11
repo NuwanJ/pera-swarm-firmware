@@ -1,9 +1,11 @@
+#include <Arduino.h>
+#include "pattern.h"
+#include "features.h"   // Enable or Diasable services
+#include "define.h"     // Configurations for version 4 PCB
+#include "config.h"   // Prepare this file before use
 
-enum pattern{P_BEGIN, P_WAIT, P_RUN };
-int patternState = P_BEGIN;
-
-int currentHopId = -1;
-boolean colorUpdated = false;
+#include "neopixel.h"
+#include "mqtt_logic.h"
 
 // Loop in the pattern
 void pattern_loop(){

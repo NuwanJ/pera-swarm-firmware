@@ -1,4 +1,9 @@
 
+#pragma once
+
+#ifndef _ROBOT_DEFINE_H
+#define _ROBOT_DEFINE_H
+
 #define ROBOT_V4
 #define SERIAL_NUMBER "SW00001"
 #define FIRMWARE_VERSION "2.0.0"
@@ -14,15 +19,15 @@ enum {BEGIN, STOP, TEST, START, IDEAL, WAIT,MODE1, MODE2, MODE3, MODE4, MODE5, M
 // This will enable or disable debug messages for IR communnication
 #define IR_DEBUG 1
 
-uint8_t mode = BEGIN;
-uint8_t buttonStatus = 0;
-uint8_t ROBOT_ID = 0;
+extern uint8_t mode;// = BEGIN;
+extern uint8_t buttonStatus;
+extern uint8_t ROBOT_ID;
 
-char tempString1[255];       // Helps to build strings
-char tempString2[255];       // Helps to build strings
+extern char tempString1[255];       // Helps to build strings
+extern char tempString2[255];       // Helps to build strings
 
 // Local Server's IP address
-String host = "";
+extern String host;
 
 // ---------------------------------------------------------------------- EEPROM
 #include "src/SW_Memory.h"
@@ -42,7 +47,7 @@ Adafruit_NeoPixel neopixel(NEOPIXEL_LED_COUNT, PIN_NEOPIXEL_LED, NEO_GRB + NEO_K
 
 // --------------------------------------------------------------- Motor Section
 #include "src/SW_Motors.h"
-SW_Motors motors;
+extern SW_Motors motors;
 
 // ----------------------------------------------------- Distance Sensor Section
 #include "src/SW_Distance.h"
@@ -80,7 +85,7 @@ SW_Infared ir;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
-long lastMsg = 0;
+extern long lastMsg;
 
 #endif
 
@@ -109,8 +114,8 @@ long lastMsg = 0;
 #define PRINT_SCAN_RESULTS
 //#define DELETE_BEFORE_PAIR
 
-esp_now_peer_info_t slaves[NUMSLAVES] = {};
-int espSlaveCount = 0;
+extern esp_now_peer_info_t slaves[NUMSLAVES] = {};
+extern int espSlaveCount;
 
 typedef struct espnow_message {
     uint8_t id;
@@ -144,22 +149,15 @@ WebServer wifiMonitor(80);
 
 // ------------------------------------------------------------- WiFi Client API
 
-#ifdef ENABLE_WIFI_CLIENT
 
-#include <WiFi.h>
-#include <HTTPClient.h>
-
-#endif
 
 
 // -----------------------------------------------------------------------------
 // MQTT communication protocol related variables
 
-// TODO: update as a struct (lock, timeout) 
-uint8_t dist_lock = 0;
-uint16_t dist_virt=0;
-
-
-
+// TODO: update as a struct (lock, timeout)
+extern uint8_t dist_lock;
+extern uint16_t dist_virt;
 
 // -----------------------------------------------------------------------------
+#endif

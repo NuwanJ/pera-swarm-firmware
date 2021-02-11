@@ -1,3 +1,6 @@
+#include "mqtt_logic.h"
+#include "mqtt_route.h"
+#include "wifi_x.h"
 
 #ifdef ENABLE_MQTT
 
@@ -162,13 +165,13 @@ void reconnect() {
 
 #else
 
-void beginMQTT(){
-    Serial.println(F(">> MQTT\t\t:disabled"));
-}
-void mqttPublish(){}
-void subscribe(){}
-void callback(char* topic, byte* message, unsigned int length){}
-void mqtt_handle(){}
-void mqtt_connect(){}
+// void beginMQTT(){
+//     Serial.println(F(">> MQTT\t\t:disabled"));
+// }
+// void mqttPublish(){}
+// void subscribe(){}
+// void callback(char* topic, byte* message, unsigned int length){}
+// void mqtt_handle(){}
+// void mqtt_connect(){}
 
 #endif

@@ -1,3 +1,6 @@
+#ifndef _ROBOT_MQTT_DEF_H
+#define _ROBOT_MQTT_DEF_H
+
 
 #define CHANNEL "v1"
 
@@ -93,3 +96,6 @@
 
 // char TOPIC_OTA_DEVICE[22];
 // sprintf(TOPIC_OTA_DEVICE, "v1/sensor/ota/%d", deviceId);
+
+
+#endif
